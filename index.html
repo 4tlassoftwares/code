@@ -125,6 +125,24 @@ body {
     object-fit: cover;
     z-index: 9999;
 }
+
+.highlight-link {
+    color: var(--accent-pink);
+    font-weight: 600;
+    text-decoration: none;
+    background: rgba(135,147,255,0.1);
+    padding: 4px 8px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(135,147,255,0.3);
+    transition: all 0.3s ease;
+}
+
+.highlight-link:hover {
+    background: rgba(135,147,255,0.25);
+    box-shadow: 0 0 12px rgba(135,147,255,0.5);
+    transform: scale(1.03);
+}
+
 </style>
 </head>
 <body>
@@ -145,15 +163,20 @@ const yourCode = "555579";
 
 if(referrer.includes(allowedRef)) {
     hero.innerHTML = `
-<h1>Access Granted</h1>
-        <p>Copy your code below:\nEnter it on this Website: https://sentricx.xyz/</p>
+        <h1>Access Granted</h1>
+        <p>Copy your code below:<br>
+        Enter it on this Website: 
+        <a href="https://sentricx.xyz/" target="_blank" class="highlight-link">
+            https://sentricx.xyz/
+        </a>
+        </p>
         <div class="code-box" id="codeBox">${yourCode}</div>
         <div class="button-group">
             <button class="btn btn-primary" id="copyBtn">
                 <i class="fas fa-copy"></i> Copy Code
             </button>
         </div>
-        `;
+    `;
 
     const copyBtn = document.getElementById("copyBtn");
     copyBtn.addEventListener("click", () => {
