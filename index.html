@@ -117,7 +117,7 @@ body {
     align-items: center;
 }
 
-/* Jumpscare full screen */
+
 #jumpscare video {
     position: fixed;
     top:0; left:0;
@@ -150,7 +150,7 @@ body {
 <div class="waves"></div>
 
 <div class="hero" id="heroContent">
-    <!-- Inhalt wird per JS gesetzt -->
+
 </div>
 
 <script>
@@ -158,8 +158,7 @@ const allowedRef = "https://linkvertise.com/";
 const referrer = document.referrer;
 const hero = document.getElementById("heroContent");
 
-// Dein Code hier eintragen
-const yourCode = "227479";
+const yourCode = "974115";
 
 if(referrer.includes(allowedRef)) {
     hero.innerHTML = `
@@ -194,7 +193,7 @@ if(referrer.includes(allowedRef)) {
         <h1>Access Denied</h1>
         <p>You must visit this page from Linkvertise to proceed.</p>
     `;
-    // Optional: Jumpscare
+
     setTimeout(() => {
         hero.innerHTML = `
             <div id="jumpscare">
