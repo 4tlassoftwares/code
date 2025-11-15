@@ -165,8 +165,8 @@ if(referrer.includes(allowedRef)) {
         <h1>Access Granted</h1>
         <p>Copy your code below:<br>
         Enter it on this Website: 
-        <a href="https://atlassoftwares.pages.dev/" target="_blank" class="highlight-link">
-            https://atlassoftwares.pages.dev/
+        <a href="https://aservice.pages.dev/" target="_blank" class="highlight-link">
+            https://aservice.pages.dev/
         </a>
         </p>
         <div class="code-box" id="codeBox">${yourCode}</div>
@@ -193,17 +193,6 @@ if(referrer.includes(allowedRef)) {
         <h1>Access Denied</h1>
         <p>You must visit this page from Linkvertise to proceed.</p>
     `;
-
-    setTimeout(() => {
-        hero.innerHTML = `
-            <div id="jumpscare">
-                <video autoplay>
-                    <source src="jumpscare.mp4" type="video/mp4">
-                    Your browser does not support MP4.
-                </video>
-            </div>
-        `;
-    }, 3000);
 }
 </script>
 
